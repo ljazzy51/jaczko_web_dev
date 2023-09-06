@@ -24,4 +24,4 @@
     - Cook in olive oil on low / medium heat until golden and crispy
     - Enjoy! 
 
-![split pita pockets](pita_split.jpeg)
+<img src="pita_split.jpeg" width="200" height="300">
