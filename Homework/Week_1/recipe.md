@@ -1,6 +1,6 @@
 # Feta Pita Pockets
 
-![whole pita pockets] (pita_whole.jpeg)
+![whole pita pockets](pita_whole.jpeg)
 
 *This recipe makes 4 patties with maybe some leftover filling which is also delicious as a dip with chips*
 *This recipe includes both homemade pita as well as a delicious filling that can even be upgraded by adding spinach to the mix*
@@ -24,4 +24,4 @@
     - Cook in olive oil on low / medium heat until golden and crispy
     - Enjoy! 
 
-![split pita pockets] (pita_split.jpeg)
+![split pita pockets](pita_split.jpeg)
