@@ -1,2 +1,2 @@
 # jaczko_web_dev
-Class repo for fall '23 web dev class -- 8am Mon/Wed
+Class repo for Fall '23 WebDev class - 8am Mon/Wed
