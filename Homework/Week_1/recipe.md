@@ -2,7 +2,7 @@
 
 <img src="pita_whole.jpeg" width="400" height="500">
 
-*This recipe makes 4 patties with maybe some leftover filling which is also delicious as a dip with chips*
+*This recipe makes 4 patties with maybe some leftover filling which is also delicious as a dip with chips* <br>
 *This recipe includes both homemade pita as well as a delicious filling that can even be upgraded by adding spinach to the mix*
 
 **Filling Ingredients** <br>
@@ -13,7 +13,7 @@
 
 **Pita Ingredients** <br>
 - 1 cup of flour
-- 6oz of plain greek yogurt
+- 6 oz of plain greek yogurt
 - Salt and pepper to taste
 - A splash of water to get it to a good dough consistency
 
