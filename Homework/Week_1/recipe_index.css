@@ -1,0 +1,38 @@
+body {
+    background-color: lavenderblush;
+}
+
+.nav_bar {
+    background-color: honeydew;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: block;
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 30px;
+    display: inline;
+    margin: 10px;
+    float: left;
+    padding: 5px;
+}
+.nav_item {
+    font-size: 20px;
+    display: inline;
+    padding: 8px;
+    float: right;
+    margin: 10px;
+}
+
+.headers {
+    text-align: center;
+}
+
+.introduction {
+    text-align: center;
+    font-style: italic;
+}
