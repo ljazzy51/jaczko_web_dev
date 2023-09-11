@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML Form Fields</title>
+  </head>
+  <body>
+    <h1>HTML Forms</h1>
+    <p>
+        The form action usually contains the file or link to process the form once we click submit
+    </p>
+    <form action="create-profile.js" name="user-create" target="_self" method="get">
+        <fieldset>
+            <legend>Simple Text Input</legend>
+            <p>
+                This is your most basic text input. We change input types with the type attribute
+            </p>
+
+            <label for="FirstName">First Name:</label>
+            <input type="text" name="FirstName" maxlength="10" placeholder="Lauren">
+            <br>
+            <label for="LastName">Last Name:</label>
+            <input type="text" name="LastName maxlength="10" placeholder="Smith">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Text Area Example</legend>
+            <label for="WhyClass">Why did you take this class?</label>
+            <textarea name="WhyClass" cols="50" rows="5"></textarea>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Input Types</legend>
+
+            <input type="text" name="Mytext"> Text
+            <input type="number" name="MyNumber"> Number
+            <input type="password" name="MyPassword"> Password
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Check Boxes</legend>
+
+            <label for="pet">What pets do you have?</label>
+            <input type="checkbox" name="pet" value="dog"> Dog
+            <input type="checkbox" name="pet" value="cat"> Cat
+            <input type="checkbox" name="pet" value="cow"> Cow
+            <input type="checkbox" name="pet" value="rat"> Rat
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Radio Fields</legend>
+
+            <label for="FavPet">What pet is your favorite?</label>
+            <input type="radio" name="FavPet" value="dog"> Dog
+            <input type="radio" name="FavPet" value="cat"> Cat
+            <input type="radio" name="FavPet" value="cow"> Cow
+            <input type="radio" name="FavPet" value="rat"> Rat
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Select Option Dropdown</legend>
+            <label for="State">Pick a state</label>
+            <select name="State">
+                <option value="AL">Alabama</option>
+                <option value="NY" selected>New York</option>
+                <option value="NH">New Hampshire</option>
+                <option value="FL">Florida</option>
+            </select>
+        </fieldset>
+        <br>
+        <input type="button" value="Submit" name="SubmitProfile">
+        <br>
+        <input type="button" value="Submit D" name="SubmitDisabled" disabled>
+    </form>
+  </body>
+</html>
