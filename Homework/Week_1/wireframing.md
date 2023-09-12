@@ -25,7 +25,7 @@ There are 5 main considerations to hold while you're creating a wireframe of a w
     - The more the better. When in doubt, ask for feedback. 
 4. Know Your Tools 
     - Once you have final sketches you must transition to a demo design and then a final design
-    - Omnigraphics is  atool that helps with wireframing 
+    - Balsamiq, figma, or hand drawn models are tools that helps with wireframing 
     - Getting comfortable with the tools in your toolbox is essential to efficiency and capability 
     - Your time should be prioritized for creativity and problem solving not having to troubleshoot the tools that you work with
     - *Make your tools work for you*
