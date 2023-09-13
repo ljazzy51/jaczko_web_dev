@@ -23,3 +23,9 @@
 - Placehold.co is the best placeholder images site
     - https://placehold.co/300x200
 - Everything looks the same in semantic html until you add the css
+
+- Inline styling is done in the tag through the html but really should only be used for testing to see if something is working 
+- Internal styling is done within the head of each page good for being quick and scrappy 
+- External style sheets like the css is the best to use to style each page 
+
+- id tags in css starts with the #
