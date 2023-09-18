@@ -1,0 +1,23 @@
+# 09/18/2023 In class notes 
+
+- Focusing on layouts and formatting 
+- margin-block-start: 0.67 em 
+    - em is a unit and it could also be shown as rem which is responsive 
+    - 1 rem is equal to 16px
+- css specificity allows you to overriding a tag or classes with other more specific titles 
+    - Allows you to control what is being styled
+- use margin 0 auto to center our wrapper div within the browser window
+    - 0 is for top and bottom and auto is for left and right 
+- border shorthand is size style color 
+- the clearfix is an invisible element that makes the wrapper fit the content
+    - most of the time you use a break tag
+- semantic tags are best practice in html as opposed to a bunch of divs 
+- the clearfix in example two is a reusable class for when you need to clear out both sides to avoid wrapping issues 
+    - this class can be used on the container or wrapper element 
+    - :after is inserting the elements of this class after the content of the element with the class attatched to it 
+        - Invisible display 
+    - to ensure cross browser compatibility add the height and font size and content: "" (empty content)
+    - visibility = hidden
+- descendant selectors are for more specificity
+- percentage based helps with resizable and respective space on different screen sizes and mobile vs desktop 
+- containers use pixles / rems and fluid uses %

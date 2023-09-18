@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
+        <title>Layout 1</title>
+        <style>
+            body {
+                margin: 0;
+            }
+
+            div, header, footer, section, aside, article, main {
+               min-height: 100px;
+               background-color: rgba(0,100,255,0.2);
+            }
+
+            main {
+                width: 960px;
+                margin: 0 auto;
+            }
+
+            .clearfix::after {
+                display: block;
+                clear: both;
+                height: 0;
+                font-size: 0;
+                content: "";
+                visibility: hidden;
+            }
+            article.col-pixels section {
+                /* 960px section - 6*10px margins / 3  = 300px for each column */
+                width: 300px;
+                margin: 0 10px;
+                float: left;
+            }
+
+            article.col-fluid section {
+                width: 20%;
+                margin: 2.5%;
+                float: left;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>A header with width 100%. We will cover menus in the next example</header>
+        <main>
+            <h1>Article 1: Pixel based</h1>
+            <article class="col-pixels clearfix">
+                <h3>Article with 3 vertical columns/sections</h3>
+                <section>
+                    <h3>Section 1</h3>
+                </section>
+                <section>
+                    <h3>Section 2</h3>
+                </section>
+                <section>
+                    <h3>Section 3</h3>
+                </section>
+            </article>
+
+        </main>
+        <br>
+        <h1>Article 2: Percent Based</h1>
+        <article class="col-fluid clearfix">
+            <h3>Article with 4 vertical columns/sections</h3>
+            <p>Note that this article is outside of our main element - which has a set pixel width </p>
+            <!-- start stacking after the elements that display block by default -->
+            <section>
+                <h3>Section 1</h3>
+            </section>
+            <section>
+                <h3>Section 2</h3>
+            </section>
+            <section>
+                <h3>Section 3</h3>
+            </section>
+            <section>
+                <h3>Section 4</h3>
+            </section>
+        </article>
+        <footer>Some random footer text</footer>
+    </body>
+</html>
