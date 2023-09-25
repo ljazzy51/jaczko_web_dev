@@ -1,0 +1,1 @@
+# 09/25/2023 In Class Notes 
