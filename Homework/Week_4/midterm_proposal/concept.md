@@ -32,3 +32,6 @@
 
 ## Pinterest Board
     - https://pin.it/7ez0qXl
+
+## Wireframes 
+    - https://www.figma.com/file/c3WcxA166DWhAtQCKPXR1t/midterm_wireframe?type=design&mode=design&t=KpCcikHhsKHojE5b-1
