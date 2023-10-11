@@ -1,0 +1,7 @@
+- Google Material Design Icons has all of the important icons that will allow you to use the standard icons 
+    - These are "fonts" in your code but it allows you to override some of the styling using the font css tools
+- Read the documentation for more tricks for the styling 
+- Spans display inline by default and only take as much space as they need to whereas divs take up the whole space because they display block
+- Global styles should be at the start because they read from start to bottom 
+- Border box means when I say width it includes the borders and the padding so I dont have to do a bunch of math 
+- Align items stretch stretches everything to fill the space that it has 
