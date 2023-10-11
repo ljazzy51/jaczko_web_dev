@@ -72,13 +72,14 @@ div.hero {
     left: 25%;
     width: 50%;
     padding: 1%;
-    background-color:rgba(238, 235, 234);
+    background-color:rgba(238, 235, 234, 0.85);
     border-radius: 35px;
 }
 
 /* Styling for the Barista Highlights */
 .container {
-    width: 100%;
+    width: 95%;
+    margin: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -91,8 +92,8 @@ div.hero {
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 30%; 
-    /* flex: 0 0 30%; This is the shorthand of above*/
     overflow: hidden;
+    /* flex: 0 0 30%; This is the shorthand of above*/
     margin: 24px auto;
 }
 
@@ -107,7 +108,7 @@ div.hero {
     justify-content: center;
     align-items: center;
     opacity: 0;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.75);
     transition: all 0.5s ease-in-out;
 }
 
@@ -136,4 +137,20 @@ div.hero {
 .thumb:hover .mask a {
     opacity: 1;
     transform: scale(1);
+}
+
+.footer_flex {
+    display: flex;
+    margin: 2rem auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    padding: 0 5%;
+    background-color: rgba(227, 218, 202);
+    border-radius: 25px;
+}
+
+.footer_flex a {
+    text-decoration: none;
+    color: black;
 }
