@@ -54,7 +54,21 @@ header {
 }
 
 /* Footer */
+.footer_flex {
+    display: flex;
+    margin: 2rem auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    padding: 0 5%;
+    background-color: rgba(227, 218, 202);
+    border-radius: 25px;
+}
 
+.footer_flex a {
+    text-decoration: none;
+    color: black;
+}
 
 /* Desktop First Styling */
 /* Styling for the jumbotron */
@@ -139,18 +153,3 @@ div.hero {
     transform: scale(1);
 }
 
-.footer_flex {
-    display: flex;
-    margin: 2rem auto;
-    justify-content: space-between;
-    align-items: center;
-    width: 95%;
-    padding: 0 5%;
-    background-color: rgba(227, 218, 202);
-    border-radius: 25px;
-}
-
-.footer_flex a {
-    text-decoration: none;
-    color: black;
-}
