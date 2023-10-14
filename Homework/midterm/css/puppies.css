@@ -98,5 +98,23 @@ header {
 }
 
 /* Desktop First Styling */
+.container {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 35px;
+}
+.thumb {
+    position: relative;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 30%; 
+    overflow: hidden;
+    /* flex: 0 0 30%; This is the shorthand of above*/
+    margin: 24px auto;
+}
 
 /* Responsive Sizing */
