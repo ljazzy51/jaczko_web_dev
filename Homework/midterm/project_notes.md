@@ -8,6 +8,10 @@
     - (227, 218, 202)
 - Titles 
     - (177, 183, 141)
+- Main text
+    - Open Sans
+- Header text
+    - Amandine
 
 **Homepage**
 - About Blurb

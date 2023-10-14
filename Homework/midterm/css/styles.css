@@ -13,6 +13,10 @@ img{
     height: auto;
 }
 
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
 /* Navigation Bar */
 header {
     display: flex;
@@ -22,16 +26,21 @@ header {
     height: 50px;
     position: fixed;
     z-index: 100;
+    margin-top: 1%;
+    font-family: "amandine", sans-serif;
 }
 
 .logo {
     margin-top: 0;
     line-height: 50px;
+    font-size: 2.5rem;
 }
 
 
 .logo a {
     text-decoration: none;
+    color: rgb(238, 235, 234);
+    font-weight: 600;
 }
 
 .main_nav ul {
@@ -41,7 +50,7 @@ header {
 }
 
 .main_nav li {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     height: 50px;
     width: 120px;
     display: inline-block;
@@ -51,6 +60,16 @@ header {
     display: block;
     text-decoration: none;
     line-height: 50px;
+    color: rgb(238, 235, 234);
+    font-weight: 700;
+}
+
+.main_nav a:hover {
+    color: rgb(204, 149, 127);
+}
+
+.logo a:hover {
+    color: rgb(204, 149, 127);
 }
 
 /* Footer */
@@ -70,6 +89,14 @@ header {
     color: black;
 }
 
+.footer_flex h2, h3{
+    font-family: "amandine", sans-serif;
+}
+
+.footer_flex .hours {
+    text-align: center;
+}
+
 /* Desktop First Styling */
 /* Styling for the jumbotron */
 div.hero {
@@ -82,12 +109,19 @@ div.hero {
 }
 .hero article {
     position: absolute;
-    top: 10%;
+    top: 12%;
     left: 25%;
     width: 50%;
     padding: 1%;
-    background-color:rgba(238, 235, 234, 0.85);
+    background-color:rgba(227, 218, 202, 0.85);
     border-radius: 35px;
+}
+.hero article h1 {
+    text-align: center;
+}
+.hero article p {
+    padding: 0 3%;
+    text-align: justify;
 }
 
 /* Styling for the Barista Highlights */
@@ -122,16 +156,21 @@ div.hero {
     justify-content: center;
     align-items: center;
     opacity: 0;
-    background-color: rgba(255,255,255,0.75);
+    background-color: rgba(238, 235, 234, 0.75);
     transition: all 0.5s ease-in-out;
 }
 
 .mask h2 {
     margin: 0;
+    font-weight: 700;
 }
 
 .mask p {
     font-style: italic;
+    padding: 5%;
+    align-content: center;
+    text-align: justify;
+    font-weight: 300;
 }
 
 .thumb:hover .mask{
@@ -153,3 +192,4 @@ div.hero {
     transform: scale(1);
 }
 
+/* Responsive Sizing */

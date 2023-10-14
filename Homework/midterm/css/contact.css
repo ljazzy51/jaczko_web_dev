@@ -13,6 +13,10 @@ img{
     height: auto;
 }
 
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
 /* Navigation Bar */
 header {
     display: flex;
@@ -22,16 +26,21 @@ header {
     height: 50px;
     position: fixed;
     z-index: 100;
+    margin-top: 1%;
+    font-family: "amandine", sans-serif;
 }
 
 .logo {
     margin-top: 0;
     line-height: 50px;
+    font-size: 2.5rem;
 }
 
 
 .logo a {
     text-decoration: none;
+    color: rgb(204, 149, 127);
+    font-weight: 600;
 }
 
 .main_nav ul {
@@ -41,7 +50,7 @@ header {
 }
 
 .main_nav li {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     height: 50px;
     width: 120px;
     display: inline-block;
@@ -51,6 +60,16 @@ header {
     display: block;
     text-decoration: none;
     line-height: 50px;
+    color: rgb(204, 149, 127);
+    font-weight: 700;
+}
+
+.main_nav a:hover {
+    color: rgb(238, 235, 234);
+}
+
+.logo a:hover {
+    color: rgb(238, 235, 234);
 }
 
 /* Footer */
@@ -69,3 +88,15 @@ header {
     text-decoration: none;
     color: black;
 }
+
+.footer_flex h2, h3{
+    font-family: "amandine", sans-serif;
+}
+
+.footer_flex .hours {
+    text-align: center;
+}
+
+/* Desktop First Styling */
+
+/* Responsive Sizing */
