@@ -14,7 +14,7 @@ img{
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Quicksand','Open Sans', sans-serif;
 }
 
 /* Navigation Bar */
@@ -24,8 +24,6 @@ header {
     width: 100%;
     padding: 0 10%;
     height: 50px;
-    position: fixed;
-    z-index: 100;
     margin-top: 1%;
     font-family: "amandine", sans-serif;
 }
@@ -40,7 +38,7 @@ header {
 .logo a {
     text-decoration: none;
     color: rgb(204, 149, 127);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .main_nav ul {
@@ -89,7 +87,11 @@ header {
     color: black;
 }
 
-.footer_flex h2, h3{
+.footer_flex h2 {
+    font-family: "amandine", sans-serif;
+}
+
+.footer_flex h3 {
     font-family: "amandine", sans-serif;
 }
 
@@ -98,5 +100,24 @@ header {
 }
 
 /* Desktop First Styling */
-
+.menu_container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 85%;
+    align-items: center;
+    margin: 3rem auto;
+    font-family: 'Quicksand','Open Sans', sans-serif;
+    
+}
+.column_left {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.column_right {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 /* Responsive Sizing */

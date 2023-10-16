@@ -1,4 +1,5 @@
 /* Global Styling */
+/* Global Styling */
 * {
     box-sizing: border-box;
 }
@@ -14,7 +15,7 @@ img{
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Quicksand','Open Sans', sans-serif;
 }
 
 /* Navigation Bar */
@@ -24,8 +25,6 @@ header {
     width: 100%;
     padding: 0 10%;
     height: 50px;
-    position: fixed;
-    z-index: 100;
     margin-top: 1%;
     font-family: "amandine", sans-serif;
 }
@@ -40,7 +39,7 @@ header {
 .logo a {
     text-decoration: none;
     color: rgb(204, 149, 127);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .main_nav ul {
@@ -89,7 +88,11 @@ header {
     color: black;
 }
 
-.footer_flex h2, h3{
+.footer_flex h2 {
+    font-family: "amandine", sans-serif;
+}
+
+.footer_flex h3 {
     font-family: "amandine", sans-serif;
 }
 
@@ -101,12 +104,12 @@ header {
 .opening {
     display: inline-block;
     position: relative;
-    margin-top: 75px;
+    margin-top: 25px;
     margin-bottom: 15px;
     left: 12.5%;
     width: 75%;
     padding: 0.5%;
-    background-color:rgba(227, 218, 202, 0.85);
+    background-color:rgba(177, 183, 141, 0.85);
     border-radius: 35px;
 }
 .opening h1 {
@@ -135,12 +138,21 @@ header {
     flex-basis: 30%; 
     overflow: hidden;
     /* flex: 0 0 30%; This is the shorthand of above*/
-    margin: 24px auto;
+    margin: 15px auto;
+    padding: 15px;
+    padding-bottom: 5px;
+    background-color: rgba(203, 182, 171, 0.85);
+    border-radius: 10%;
 }
 
 .thumb img {
     border-radius: 10%;
 }
 
+.thumb h2 {
+    color: black;
+    font-weight: 500;
+    font-size: 2rem;
+}
 
 /* Responsive Sizing */
