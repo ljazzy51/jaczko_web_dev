@@ -19,3 +19,8 @@
         - checks that it it either equals true as a boolean or true as a string 
     - isOn === true;
         - checks that it is a boolean And it is true 
+- i++ is shorthand for i+1 i-- is shorthand for i-1
+- i+= is shorthand for i = i+3 
+- beware of infinate loops 
+    - your condition must eventually evaluate to false in order to exit and avoid this looping problem
+    
