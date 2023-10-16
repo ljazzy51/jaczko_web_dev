@@ -12,3 +12,10 @@
     - You must return the value of the variable
 - Undefined means doesnt exist and null means empty 
 - Once JS throws an error the code stops running there and doesnt conrtinue throughout the code
+- == checks for the validity of the statement and === checks for the validity as well as the type 
+    - isOn = "true"; 
+        - checks for the resemblance of the word
+    - isOn == true; 
+        - checks that it it either equals true as a boolean or true as a string 
+    - isOn === true;
+        - checks that it is a boolean And it is true 

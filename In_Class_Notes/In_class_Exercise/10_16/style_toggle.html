@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML Form Fields</title>
+    <style>
+        .active{
+            background-color: #006FFF;
+            color: #FFFF;
+            font-size: 60px;
+        }
+         
+    </style>
+    <script>
+        function toggleActive(){
+            var element = document.getElementById("changeMe");
+            console.log(element);
+
+            if(element.classList.contains("active")){
+                element.classList.remove("active");
+                console.log("Im not active anymore")
+            } else {
+                element.classList.add("active");
+                console.log("Im active now")
+            }
+        }
+    </script>
+  </head>
+  <body>
+    <h1 id="changeMe" onclick="toggleActive">This is a header. Click me to change my content</h1>
+  </body>
+</html>

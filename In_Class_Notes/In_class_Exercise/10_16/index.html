@@ -42,15 +42,41 @@
             // Executing a function 
             sumVals(45, 45);
 
+            // two ways to return the values that are set within a function
             let myStuff = sumVals(33, 77);
             console.log(myStuff);
             console.log(sumVals(33, 77));
 
+            //booleans and conditionals
+            let isOn = true;
+            function toggle(){
+                if (isOn === true){
+                    console.log("isOn is currently ", isOn, "switching to false now");
+                    isOn = false;
+                } else {
+                    console.log("isOn is currently ", isOn, "switching to true now");
+                    isOn = true;
+                }
+            }
+
+            toggle();
+            toggle();
+
+            //loops and incraments 
+            function countToN(n){
+                // we use this when we want to iterate over an array of numbers 
+                for(var i = 0; i <= n; i++){
+                    console.log(i);
+                }
+            }
+            countToN(15);
 
         </script>
     </head>
 
     <body>
-
+        <button onclick="sumVals(155,551)"> sunVals</button>
+        <button onclick="toggle()">toggle</button>
+        <button onclick="countToN(25)">countToN </button>
     </body>
 </html>
