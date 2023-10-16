@@ -102,22 +102,102 @@ header {
 /* Desktop First Styling */
 .menu_container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
     width: 85%;
     align-items: center;
     margin: 3rem auto;
-    font-family: 'Quicksand','Open Sans', sans-serif;
-    
+    font-family: 'Quicksand','Open Sans', sans-serif;  
 }
 .column_left {
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 100%;
 }
 .column_right {
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 100%;
 }
+/* left column specifics */
+.page_title {
+    color: rgb(0, 0, 0);
+    background-color: rgba(177, 183, 141, 0.85);
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 25px;
+    margin-top: 0;
+    width: 20%;
+    text-align: center;
+    font-size: large;
+}
+.coffee_shades {
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 25px;
+    width: 75%;
+}
+.coffee_shades img {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 30%; 
+    overflow: hidden;
+}
+.drinks {
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 25px;
+    width: 75%;
+}
+.pastries {
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 25px;
+    width: 75%;
+}
+
+/* right column specifics */
+.drink_menu {
+    color: rgb(238, 235, 234);
+    background-color: rgb(182, 155, 139);
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 25px;
+    width: 75%;
+}
+.flavors {
+    color: rgb(238, 235, 234);
+    background-color: rgb(134, 110, 79);
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 25px;
+    width: 75%;
+}
+.teas {
+    color: rgb(238, 235, 234);
+    background-color: rgba(149,102,65);
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 25px;
+    width: 75%;
+}
+.pastry_menu {
+    color: rgb(238, 235, 234);
+    background-color: rgb(89, 47, 34);
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 25px;
+    width: 75%;
+}
+
 /* Responsive Sizing */
