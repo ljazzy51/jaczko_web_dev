@@ -100,5 +100,75 @@ header {
 }
 
 /* Desktop First Styling */
+.page_title {
+    color: rgb(52, 49, 48);
+    background-color: rgba(177, 183, 141, 0.85);
+    border-radius: 15px;
+    padding: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    width: 75%;
+    text-align: center;
+    font-size: large;
+    font-family: "amandine", sans-serif;
+}
+.page_container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 85%;
+    align-items: center;
+    margin: 3rem auto;
+    font-family: 'Quicksand','Open Sans', sans-serif;  
+}
+.column_left {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 75%;
+    margin-left: 5%;
+}
+.column_right {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 75%;
+    margin-left: 5%;
+}
+/* Left Column Specific */
+.hours_block {
+    width: 100%;
+}
+.left {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.right {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.hours_dates {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+.location_block {
+    width: 100%;
+}
+.address_trains {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+/* Right Column Specific */
 
 /* Responsive Sizing */
