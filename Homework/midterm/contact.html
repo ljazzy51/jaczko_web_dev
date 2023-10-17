@@ -30,9 +30,7 @@
         <div class="page_container">
             <div class="column_left">
                 <div class="hours_block">
-                    <div class="top">
-                        <h3>Hours</h3>
-                    </div>
+                    <h3>Hours</h3>
                     <div class="hours_dates">
                         <div class="left">
                             <div class="top_left">
@@ -53,9 +51,7 @@
                     </div>
                 </div>
                 <div class="location_block">
-                    <div>
-                        <h3>Location and Transit</h3>
-                    </div>
+                    <h3>Location and Transit</h3>
                     <div class="address_trains">
                         <div>
                             <p>100 Willoughby St</p>
@@ -63,16 +59,38 @@
                             <p>11201</p>
                         </div>
                         <div>
-                            <h4>Nearby Trains</h3>
+                            <h4>Nearby Trains:</h3>
                             <p>A C F & R Trains</p>
                         </div>
                     </div>
                 </div>
+                <div class="embedded_map">
+                    <h3>Google Map for AVAbrew</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.179257421307!2d-73.98975851326155!3d40.6920495650979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a4b69a23573%3A0x820fd7a2093a1aa6!2sAva%20Brew!5e0!3m2!1sen!2sus!4v1697571966202!5m2!1sen!2sus" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
             <div class="column_right">
-                <div class="contact_form">
-
+                <div class="contact_about">
+                    <h2>Hey there!</h2>
+                    <p>
+                        Feel free to visit us at the shop or if you have a more pressing comment or concern,
+                        feel free to reach out to us via the contact form below! 
+                        Thank you for checking out the shop!
+                    </p>
                 </div>
+                <form action="contact.html" target="_self" method="post">
+                    <div class="form_items">
+                        <label for="fname">First Name:</label><br>
+                        <input type="text" id="fname" name="fname" value="John"><br>
+                        <label for="lname">Last Name:</label><br>
+                        <input type="text" id="lname" name="lname" value="Doe"><br>
+                        <label for="email">Email:</label><br>
+                        <input type="email" name="email" id="email" value="abc123@gmail.com"><br>
+                        <label for="message">Message:</label>
+                        <input type="text" name="message" id="message" value="Hello..."><br><br>
+                    </div>
+                    <input type="submit" value="Submit">
+                </form>
             </div>
 
         </div>
@@ -99,7 +117,7 @@
                 <p>8:00am - 5:00pm</p>
             </span>
             <span>
-                <h2><a href="https://orenscoffee.com" target="_blank">Oren's Coffee</a></h2>
+                <button><a href="https://orenscoffee.com" target="_blank">Oren's Coffee</a></button>
             </span>
         </footer>
     </body>

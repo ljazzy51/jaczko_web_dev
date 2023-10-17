@@ -99,6 +99,17 @@ header {
     text-align: center;
 }
 
+.footer_flex button {
+    font-family: "amandine", sans-serif;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    font-weight: 600;
+    font-stretch: expanded;
+    background-color: rgba(204, 149, 127, 0.51) ;
+}
+
 /* Desktop First Styling */
 /* Styling for the jumbotron */
 div.hero {
