@@ -208,3 +208,40 @@ div.hero {
 }
 
 /* Responsive Sizing */
+@media screen and (max-width:767px) {
+    .container{
+        width: 87%;
+        margin: 0 5.5%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: rgba(179, 149, 131);
+        border-radius: 35px;
+        padding: 10%;
+    }
+    .thumb {
+        flex-basis: 45%;
+    }
+
+    .hero img {
+        width: 150%;
+    }
+    .hero article{
+        position: absolute;
+        top: 12%;
+        left: 12%;
+        width: 75%;
+        background-color:rgba(227, 218, 202, 0.75);
+        border-radius: 35px;
+    }
+
+    .footer_flex span {
+        display: none;
+    }
+    .footer_flex button {
+       margin-left: 25%;
+       margin-top: 25px;
+       margin-bottom: 25px;
+    }
+}
