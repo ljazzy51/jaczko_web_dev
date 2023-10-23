@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document Object Model</title>
+    <style type="text/CSS">
+        #content {
+            color: red;
+        }
+
+        @media only screen and (max-width:767px) {
+            #content {
+                color: blue;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <button onclick="addSingleP()">Add a single P using strings</button>
+    <!-- passing the parameter of 9 to add 9 paragraphs you can change this for however many you want -->
+    <button onclick="addMultiP(9)">Add multiple Ps using DOM nodes</button>
+    
+    <div id="content">
+        <p>This is a DOM dummy text that will be overwritten by inner HTML </p>
+    </div>
+
+    <!-- Putting the script at the end is the lazy way to make sure that everything on the page has already been loaded before trying to run the script -->
+    <script type="text/javascript">
+        // Declare our content variable globally  
+        // This will work globally because the script tag is at the end of the body and all the content has been loaded prior to this
+        const content = document.getElementById("content");
+
+        // Inner html is everything in between the opening and close tag of the selected id
+        // Replacing the inner html is yucky and should only be done for debugging
+        function addSingleP(){
+            content.innerHTML = "<p>This is a poorly instantiated p tag using string trickery</p>"
+        }
+
+        // Proper dynamic DOM with the function multiP
+        // Not overwriting the inner html but rather appending it to the end of the div content
+        function addMultiP(num){
+            // start our loop 
+            for(var i = 0; i < num; i++){
+                // create  a p element node
+                // You must use a capital letter (valid html element) in order to create the element 
+                var p = document.createElement("P");
+                // p = <p></p>
+                // create a text node to go inside our p node 
+                var text = document.createTextNode("This is paragraph number " + (i+1));
+
+                //append the text to the paragraph (Go inside the tag and make this node a child of the element)
+                p.appendChild(text);
+                // p = <p> this is paragraph number i </p>
+                //Now we have to append the p to the content div
+                content.appendChild(p);
+
+                // you must create and append the vars within the loop because it will throw an error outside of the loop due to scope
+            } 
+        }
+
+    </script>
+  </body>
+</html>
