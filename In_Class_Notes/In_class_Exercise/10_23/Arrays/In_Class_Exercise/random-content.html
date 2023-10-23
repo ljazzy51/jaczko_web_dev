@@ -2,9 +2,45 @@
 <html>
   <head>
     <title>Random Content using an array</title>
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+      var arrayImg = [
+        "https://media.istockphoto.com/id/531000898/photo/portrait-of-calf-lying-in-straw-on-farm.jpg?s=612x612&w=0&k=20&c=GChGLYU4BXf_a7Tjmv8ewOK5l9mt8e-WQ0S6Zf31ZZY=",
+        "https://i.redd.it/k7wma4ckihv31.jpg",
+        "https://i.pinimg.com/originals/56/f3/41/56f341a7885c83d3ce22f4342c20d718.png",
+        "https://s.yimg.com/ny/api/res/1.2/hg1LRttpLwVGpIbCKxGfqQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNg--/https://media.zenfs.com/en/pethelpful_915/13b98a59f2efe63eabf9ad2d6e8ad138"
+      ];
+      var arrayLink = [
+        "https://en.wikipedia.org/wiki/Cattle",
+        "https://en.wikipedia.org/wiki/Hereford_cattle",
+        "https://en.wikipedia.org/wiki/Limousin_cattle",
+        "https://en.wikipedia.org/wiki/Tarentaise_cattle"
+      ];
+
+      //random helper function
+      // math.random is a random float between 0 and 1 
+      //math.round(num) returns the rounded up or down value passed by random 
+      //floor means round down and ceil is round up
+
+      function randNum(max){
+        var rn = Math.floor(max * Math.random());
+        return rn;
+      }
+
+      function loadRandomImage(){
+        var index = randNum(arrayImg.length);
+        var img = document.getElementById("dyn-img");
+        var link = document.getElementById("dyn-link");
+        img.src = arrayImg[index];
+        link.href = arrayLink[index];
+      }
+
+      document.addEventListener("DOMContentLoaded", loadRandomImage());
+
+    </script>
   </head>
   <body>
-    <a href="#" target="_blank" id="dyn-link"><img src="" id="dyn-img" /></a>
+    <a href="#" target="_blank" id="dyn-link">
+      <img src="" id="dyn-img" />
+    </a>
   </body>
 </html>

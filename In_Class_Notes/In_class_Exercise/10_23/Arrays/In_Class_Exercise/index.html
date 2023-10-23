@@ -2,7 +2,56 @@
 <html>
   <head>
     <title>Arrays 101</title>
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+      //declared a variable called myArray and assigned its value to be an empty array 
+      var myArray  = [];
+      console.log(myArray);
+      console.log(myArray.length);
+      var months = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
+      ]
+      console.log(months);
+      console.log(months.length);
+
+      //global variable to store the div element we want to write to once the page has loaded
+      // It cant be a const because the page content hasnt loaded yet so we cant assign a value to it immedietly 
+      var el; 
+      //DOMContentLoaded is an event listener that waits for the page content to be fully loaded and then calls the anonymous function 
+      // The function is the second parameter and just needs to live and die within the event listener 
+      document.addEventListener('DOMContentLoaded', function() {
+        el = document.getElementById("lists");
+        // loop through the months array and log the index number and the month string stored in each slot 
+        for (var i = 0; i < months.length; i++){
+          // first one would be 0 : January
+          var message = i + ": " + months[i];
+          //appends the inner html of the div with the id of lists
+          el.innerHTML += message + "<br/>"
+        }
+      })
+
+      //Access the 4th month of the array 
+      console.log(months[3]);
+      //We can remove elements from the END OF THE array by using pop 
+      console.log(months.length);
+      var lastMonth = months.pop();
+      console.log(lastMonth + " was removed from the calander. The new year is "+ months.length + " months long ");
+      // We can add elements back to the END of the array using push
+      console.log(months.length);
+      months.push(lastMonth);
+      console.log(lastMonth + " was added back to the calander. The new year is "+ months.length + " months long ");
+
+    </script>
   </head>
 
   <body>
