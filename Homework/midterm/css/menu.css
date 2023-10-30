@@ -283,4 +283,49 @@ header {
     text-align: justify;
 }
 
+.mobile_menu {
+    display: none;
+}
+
+
 /* Responsive Sizing */
+@media screen and (max-width:767px) {
+    .mobile_menu {
+        position: absolute;
+        right: 55px;
+        display: block;
+        font-size: 2rem;
+        color: rgb(204, 149, 127);
+        cursor: pointer;
+    }
+
+
+    .menu{
+        
+        overflow: hidden;
+        height: 0;
+        padding-top: 1rem;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu.open {
+        height: auto;
+    }
+
+    .menu li {
+        height: auto;
+        z-index: 1;
+        background-color: rgba(216, 201, 174);
+        padding-bottom: 5px;
+
+    }
+
+    .footer_flex span {
+        display: none;
+    }
+    .footer_flex button {
+       margin: 5% 35%;
+    }
+}
