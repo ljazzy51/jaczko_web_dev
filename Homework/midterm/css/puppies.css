@@ -207,17 +207,19 @@ header {
 
     .container{
         width: 87%;
-        margin: 0 5.5%;
+        margin: 0 7%;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
         background-color: rgba(203, 182, 171, 0.85);
         border-radius: 35px;
         padding: 10%;
     }
     .thumb {
         flex-basis: 45%;
+        padding: 0%;
     }
 
     .footer_flex span {

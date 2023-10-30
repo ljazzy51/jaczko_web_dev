@@ -328,4 +328,35 @@ header {
     .footer_flex button {
        margin: 5% 35%;
     }
+
+    .menu_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column_left{
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .column_right {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .column_left div {
+        width: 100%;
+    }
+    .column_right div {
+        width: 100%;
+    }
+
 }
