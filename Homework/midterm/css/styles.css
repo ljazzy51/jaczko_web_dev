@@ -246,7 +246,7 @@ div.hero {
         cursor: pointer;
     }
 
-    .main_nav {
+    .main_nav{
         flex-direction: column;
         width: 100vw;
         overflow: hidden;

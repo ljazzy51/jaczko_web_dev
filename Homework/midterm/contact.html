@@ -7,6 +7,12 @@
         <link rel="stylesheet" href="./css/contact.css">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.typekit.net/oyp1qci.css">
+        <script>
+            function toggleMenu() {
+              const el = document.getElementById('menu');
+              el.classList.toggle('open');
+            }
+        </script>
     </head>
     <body>
         <!-- Navigation bar that will be copies to each page -->
@@ -14,7 +20,7 @@
             <h1 class="logo">
                 <a href="./index.html">AVAbrew</a>
             </h1>
-            <nav class="main_nav">
+            <nav class="main_nav" id="menu">
                 <ul>
                     <li><a href="./menu.html">Menu</a></li>
                     <li><a href="./puppies.html">Puppies</a></li>
