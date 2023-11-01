@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Geolocation</title>
+
+        <script type="text/javascript">
+            // add an event listener to load script after the html
+            // once the html is loaded it will search for the users location
+
+            // API Key:delete this before pushing to github
+            // Put API key back here when you revisit this project 
+
+            document.addEventListener("DOMContentLoaded", getLocation);
+
+            function getLocation(){
+                // conditional to check if the users browser supports geolocation
+                if(navigator.geolocation){
+                    console.log("here");
+                    // geolocation is turned on and exists
+                    // pass the geolocation into a callback function
+                    navigator.geolocation.getCurrentPosition(setPosition);
+                } else {
+                    // geolocation services is turned off so the alert is called instead
+                    alert("Your browser does not support geolocation");
+                }
+            }
+
+            function setPosition(position){
+                console.log(position.coords.latitude);
+                console.log(position.coords.longitude);
+
+                var lat = position.coords.latitude;
+                var long = position.coords.longitude;
+                var loc = document.getElementById("location");
+
+                loc.innerHTML = "<p>Lattitude: " + lat + "<br />Longitude: " + long + "</p>";
+            }
+
+            //(40.6933538, -73.9879936)
+
+        </script>
+    </head>
+    <body>
+        <div id="location">
+            <p>Currently searching for location...</p>
+        </div>
+    </body>
+</html>
