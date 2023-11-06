@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Loading Google Maps</title>
+    <style>
+      #map {
+        width: 100vw;
+        height: 100vw;
+      }
+    </style>
+    <script>
+      (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+        key: "AIzaSyCuVefH-JBBldwuJk23Mp5g3q-ptV55pwA",
+        v: "weekly",
+        // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+        // Add other bootstrap parameters as needed, using camel case.
+      });
+    </script>
+
+    
+    <script>
+      let map;
+
+      /*
+      //This is the simplest example of inserting a map
+
+      async function initMap() {
+        // Destructuring the rightside returns the library to the leftside where its being pulled out to be used by the variable called Map
+        // This is returning the maps library
+        // Map is the maps library usage
+        // Map is in {} because its returning the library which is an object and the methods are the keys
+        // Because Map cant be filled until the map library is returned so the "await" tag waits for the stuff to be returned 
+        // Every time you use await the function declaration  has to be tagged as async
+        const { Map } = await google.maps.importLibrary("maps");
+    
+        // Creating a new Map object and telling it where to be housed
+        // new Map() takes two arguments
+          // 1) the element on our oage we want to append the mao to
+          // 2) an object filled with all of our parametets for the map 
+        map = new Map(document.getElementById("map"), {
+          // pass the lat and long to the key center so we know where to  get it 
+          center: { lat: 40.6933529, lng: -73.987961 },
+          // This is the zoom factor for the initial 
+          zoom: 8,
+        });
+      }
+      initMap();
+`     */
+
+      //This is a map with a marker 
+      async function initMap() {
+        // The location of 370 Jay st stored as a variable
+        const position = { z };
+        // Request needed libraries.
+        //@ts-ignore
+        const { Map } = await google.maps.importLibrary("maps");
+        const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+        // The map, centered at 370 Jay st
+        map = new Map(document.getElementById("map"), {
+          zoom: 15,
+          center: position,
+          mapId: '3f9dfeb35b057d78',
+        });
+
+        /*
+        // The marker, positioned at 370 Jay st
+        const marker = new AdvancedMarkerElement({
+          // marker needs to know which map to append the marker to in case of multiple maps
+          map: map,
+          // The lat and long of where the marker should be 
+          position: position,
+          // The information of what to show in an advanced marker
+          title: "NYU Room 309",
+        });
+        */
+
+        //Make a styled marker
+        const pinScaled = newPinElement(
+          
+        )
+        scale: 2.5;
+
+      }
+
+      initMap();
+    </script>
+
+  </head>
+  <body>
+    <!-- Remember to take this out at the end of class and paste the api key only when youre working on it -->
+    <!-- AIzaSyCuVefH-JBBldwuJk23Mp5g3q-ptV55pwA -->
+    <!-- 
+      Lattitude: 40.6933529 
+      Longitude: -73.987961
+    -->
+    <div id="map"></div>
+
+  </body>
+</html>
