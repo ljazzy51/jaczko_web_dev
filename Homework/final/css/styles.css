@@ -1,0 +1,246 @@
+/* Global Styling */
+* {
+    box-sizing: border-box;
+}
+
+html body{
+    margin: 0;
+    background-color: rgba(216, 201, 174);
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: 'Quicksand','Open Sans', sans-serif;
+}
+
+/* Navigation Bar */
+.navbar .container-fluid{
+    background-color: rgba(216, 201, 174);
+    font-family: "amandine", sans-serif;
+}
+
+.navbar {
+    height: 75px;
+    z-index: 1;
+}
+
+.container-fluid .navbar-brand{
+    font-size: 2.5rem;
+    color: rgb(204, 149, 127);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    margin-left: 2.5%;
+}
+
+.navbar-collapse{
+    justify-content: right;
+}
+
+.navbar-nav {
+    list-style-type: none;
+    text-align: center;
+    margin-right: 2.5%;
+}
+
+.navbar-nav .nav-link{
+    color: rgb(204, 149, 127);
+}
+
+.nav-item {
+    font-size: 2rem;
+}
+
+.nav-link {
+    display: block;
+    line-height: 50px;
+    font-weight: 600;
+}
+
+.nav-item a:hover {
+    color: rgb(238, 235, 234);
+}
+
+.navbar-brand a:hover {
+    color: rgb(238, 235, 234);
+}
+
+/* Footer */
+.footer_flex {
+    display: flex;
+    margin: 2rem auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    padding: 0 5%;
+    background-color: rgba(227, 218, 202);
+    border-radius: 25px;
+}
+
+.footer_flex a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Quicksand','Open Sans', sans-serif;
+}
+
+.footer_flex h2 {
+    font-family: "amandine", sans-serif;
+}
+
+.footer_flex h3 {
+    font-family: "amandine", sans-serif;
+}
+
+.footer_flex p {
+    font-family: 'Quicksand','Open Sans', sans-serif;
+}
+
+.footer_flex .hours {
+    font-family: 'Quicksand','Open Sans', sans-serif;
+    text-align: center;
+}
+
+.footer_flex button {
+    font-family: "amandine", sans-serif;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    font-weight: 600;
+    font-stretch: expanded;
+    background-color: rgba(204, 149, 127, 0.51) ;
+}
+
+.footer_flex button:hover {
+    color: black;
+}
+
+/* Desktop First Styling */
+/* Styling for the jumbotron */
+div.hero {
+    top: 15%;
+    width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.hero article {
+    position: absolute;
+    top: 12%;
+    left: 25%;
+    width: 50%;
+    padding: 1%;
+    background-color:rgba(227, 218, 202, 0.85);
+    border-radius: 35px;
+}
+.hero article h1 {
+    text-align: center;
+    font-family: "amandine", sans-serif;
+}
+.hero article p {
+    padding: 0 3%;
+    text-align: justify;
+    font-family: 'Quicksand','Open Sans', sans-serif;
+}
+
+/* Styling for the Barista Highlights */
+
+.container-fluid {
+    background:rgba(179, 149, 131);
+    border-radius: 35px;
+}
+
+.row{
+    padding-top: 3.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    justify-content: center;
+}
+
+.thumb {
+    position: relative;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 30%; 
+    overflow: hidden;
+    /* flex: 0 0 30%; This is the shorthand of above*/
+    margin: 24px auto;
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background-color: rgba(238, 235, 234, 0.75);
+    transition: all 0.5s ease-in-out;
+}
+
+.mask h2 {
+    margin: 0;
+    font-weight: 700;
+    font-family: "amandine", sans-serif;
+    text-align: center;
+}
+
+.mask p {
+    font-style: italic;
+    padding: 5%;
+    align-content: center;
+    text-align: justify;
+    font-weight: 300;
+}
+
+.thumb:hover .mask{
+    opacity: 1;
+}
+
+.thumb .mask h2, 
+.thumb .mask p,
+.thumb .mask a {
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s ease-in-out;
+}
+
+.thumb:hover .mask h2, 
+.thumb:hover .mask p,
+.thumb:hover .mask a {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* Responsive Sizing */
+@media screen and (max-width:767px) {
+    .hero img {
+        width: 150%;
+    }
+    .hero article{
+        position: absolute;
+        top: 25%;
+        left: 12%;
+        width: 75%;
+        background-color:rgba(227, 218, 202, 0.75);
+        border-radius: 35px;
+    }
+
+    .footer_flex span {
+        display: none;
+    }
+    .footer_flex button {
+       margin: 5% 35%;
+    }
+}
