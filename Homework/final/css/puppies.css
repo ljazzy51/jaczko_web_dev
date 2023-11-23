@@ -1,10 +1,9 @@
 /* Global Styling */
-/* Global Styling */
 * {
     box-sizing: border-box;
 }
 
-html, body {
+html body{
     margin: 0;
     background-color: rgba(216, 201, 174);
 }
@@ -19,55 +18,60 @@ body {
 }
 
 /* Navigation Bar */
-header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 10%;
-    height: 50px;
-    margin-top: 1%;
+.navbar .container-fluid{
+    background-color: rgba(216, 201, 174);
     font-family: "amandine", sans-serif;
 }
 
-.logo {
-    margin-top: 0;
-    line-height: 50px;
+.navbar {
+    height: 75px;
+    z-index: 1;
+}
+
+.container-fluid .navbar-brand{
     font-size: 2.5rem;
-}
-
-
-.logo a {
-    text-decoration: none;
     color: rgb(204, 149, 127);
-    font-weight: 700;
 }
 
-.main_nav ul {
+.navbar-brand {
+    font-weight: 700;
+    margin-left: 2.5%;
+}
+
+.navbar-collapse{
+    justify-content: right;
+}
+
+.navbar-nav {
     list-style-type: none;
     text-align: center;
-    font-size: 0;
+    margin-right: 2.5%;
 }
 
-.main_nav li {
-    font-size: 1.5rem;
-    height: 50px;
-    width: 120px;
-    display: inline-block;
-}
-
-.main_nav a {
-    display: block;
-    text-decoration: none;
-    line-height: 50px;
+.navbar-nav .nav-link{
     color: rgb(204, 149, 127);
-    font-weight: 700;
 }
 
-.main_nav a:hover {
+.nav-item {
+    font-size: 2rem;
+}
+
+.container-fluid .navbar-nav .nav-link.active {
     color: rgb(238, 235, 234);
 }
 
-.logo a:hover {
+.nav-link {
+    display: block;
+    line-height: 50px;
+    font-weight: 600;
+}
+
+
+.nav-item a:hover {
+    color: rgb(238, 235, 234);
+}
+
+.container-fluid .navbar-brand:hover {
     color: rgb(238, 235, 234);
 }
 
@@ -86,6 +90,7 @@ header {
 .footer_flex a {
     text-decoration: none;
     color: black;
+    font-family: 'Quicksand','Open Sans', sans-serif;
 }
 
 .footer_flex h2 {
@@ -96,7 +101,12 @@ header {
     font-family: "amandine", sans-serif;
 }
 
+.footer_flex p {
+    font-family: 'Quicksand','Open Sans', sans-serif;
+}
+
 .footer_flex .hours {
+    font-family: 'Quicksand','Open Sans', sans-serif;
     text-align: center;
 }
 
@@ -111,6 +121,9 @@ header {
     background-color: rgba(204, 149, 127, 0.51) ;
 }
 
+.footer_flex button:hover {
+    color: black;
+}
 /* Desktop First Styling */
 .opening {
     display: inline-block;
@@ -130,6 +143,7 @@ header {
 .opening p {
     padding: 0 3%;
     text-align: justify;
+    font-family: 'Quicksand','Open Sans', sans-serif;
 }
 
 
@@ -165,6 +179,7 @@ header {
     color: black;
     font-weight: 500;
     font-size: 2rem;
+    font-family: 'Quicksand','Open Sans', sans-serif;
 }
 .mobile_menu {
     display: none;
@@ -173,7 +188,7 @@ header {
 
 /* Responsive Sizing */
 @media screen and (max-width:767px) {
-    .mobile_menu {
+    /* .mobile_menu {
         position: absolute;
         right: 55px;
         display: block;
@@ -220,7 +235,7 @@ header {
     .thumb {
         flex-basis: 45%;
         padding: 0%;
-    }
+    } */
 
     .footer_flex span {
         display: none;
