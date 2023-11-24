@@ -139,37 +139,17 @@ body {
     font-size: large;
     font-family: "amandine", sans-serif;
 }
-.page_container {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    width: 85%;
-    align-items: center;
-    margin: 3rem auto;
+.container {
     font-family: 'Quicksand','Open Sans', sans-serif;  
-}
-.column_left {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 75%;
-    margin-left: 5%;
-}
-.column_right {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 75%;
-    margin-right: 5%;
 }
 
 /* Left Column Specific */
 .hours_block {
-    width: 85%;
     background-color: rgba(217, 204, 200, 0.85);
     border-radius: 35px;
     padding-bottom: 10px;
     margin-bottom: 5%;
+    margin-right: 2%;
 }
 .hours_block h3 {
     text-align: center;
@@ -198,15 +178,16 @@ body {
     justify-content:space-between;
 }
 .top_left {
+    margin-top: 10px;
     font-size: 1.15rem;
 }
 .top_right {
+    margin-top: 10px;
     font-size: 1.15rem;
 }
 
 
 .location_block {
-    width: 85%;
     background-color: rgba(169, 155, 148, 0.85);
     border-radius: 35px;
     padding-bottom: 10px;
@@ -229,11 +210,15 @@ body {
     padding-right: 10%;
 }
 .address_trains h4 {
+    padding-top: 25px;
     font-size: 1.15rem;
+}
+.address_trains p {
+    padding-top: 5px;
+    font-size: 1rem;
 }
 
 .embedded_map {
-    width: 85%;
     background-color: rgba(189, 195, 177, 0.85);
     border-radius: 35px;
     padding-bottom: 10px;
@@ -252,18 +237,18 @@ body {
 .embedded_map iframe {
     display: flex;
     border-radius: 15px;
-    margin-left: 20%;
+    margin-left: 14%;
     margin-bottom: 2%;
 }
 
 /* Right Column Specific */
 .contact_about {
-    width: 85%;
     background-color: rgba(155, 166, 162, 0.85);
     border-radius: 25px;
     padding: 1% 5%;
     text-align: left;
     margin: 5%;
+    margin-left: 2%;
 }
 .contact_about h2 {
     font-family: "amandine", sans-serif;
@@ -271,7 +256,6 @@ body {
 }
 
 form{
-    width: 85%;
     background-color: rgba(204, 149, 127, 0.85);
     border-radius: 25px;
     padding: 7%;
@@ -285,6 +269,7 @@ form label {
     font-stretch: expanded;
     margin-left: 15%;
 }
+
 .form_items input {
     font-family: 'Quicksand','Open Sans', sans-serif;
     font-size: 1.15rem;
@@ -301,10 +286,6 @@ form input {
     border-radius: 7px;
     margin-left: 15%;
     background-color: rgba(242, 242, 242, 0.85);
-}
-
-.mobile_menu {
-    display: none;
 }
 
 
