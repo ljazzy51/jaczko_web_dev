@@ -93,6 +93,68 @@
     <!-- Linking to the clou hosted free version og the scroll plug in and gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+      // wait for the DOM content to load before grabbing html elements  
+      document.addEventListener('DOMContentLoaded', function(){
+        //make all of the content fade in on load
+        gsap.from('body', 1, {opacity: 0})
+        //menu slide in from the right 
+        gsap.from('ul', 1, {right: -500, delay: 0.5})
+
+        //grab each button by id and assign them to variables 
+        const floor1btn = document.getElementById('floor1btn')
+        const floor2btn = document.getElementById('floor2btn')
+        const floor3btn = document.getElementById('floor3btn')
+        const floor4btn = document.getElementById('floor4btn')
+        const floor5btn = document.getElementById('floor5btn')
+
+        // HTML collection returned NOT an array
+        let navButtons = document.getElementsByTagName('LI')
+        console.log(navButtons)
+        // cast from html collection to an array to make it easier to work with
+        navButtons = [].slice.call(navButtons)
+        console.log(navButtons)
+
+        //add and remove the active class on mouse enter and on mouse leave 
+        navButtons.forEach((button) => {
+          button.addEventListener('mouseenter', function () {
+            gsap.to(this, {className: 'active', duration
+            :1})
+          })
+        })
+        navButtons.forEach((button) => {
+          button.addEventListener('moudeleave', function () {
+            gsap.to(this, {className: 'active', duration: 1})
+          })
+        })
+
+        // set the scroll position to the topof th e
+        console.log.querySelector(floor1panel).getBoundinClientRect().top
+
+        floor1btn.setAttribute(
+          'data-scrollpos',
+          document.querySelector(floor1panel).getBoundinClientRect().top
+        ) 
+        floor2btn.setAttribute(
+          'data-scrollpos',
+          document.querySelector(floor2panel).getBoundinClientRect().top
+        ) 
+        floor3btn.setAttribute(
+          'data-scrollpos',
+          document.querySelector(floor3panel).getBoundinClientRect().top
+        ) 
+        floor4btn.setAttribute(
+          'data-scrollpos',
+          document.querySelector(floor4panel).getBoundinClientRect().top
+        ) 
+        floor5btn.setAttribute(
+          'data-scrollpos',
+          document.querySelector(floor5panel).getBoundinClientRect().top
+        ) 
+
+
+      })
+
+    </script>
   </body>
 </html>

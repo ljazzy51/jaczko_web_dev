@@ -4,3 +4,6 @@
 - In css specificity ids have a weight of 100 classes have 10 and tags have 1
 - headers display block and therefore take up the whole space allowed 
 - changing the cursor doesnt change the capabilities. javascript does 
+- gsap.from('body', 2, {opacity: 0})
+    - (selector, time, what we want it to go to)
+- document.getElementsByTagName gets a collection back
