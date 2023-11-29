@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Elevator Scrolling Example</title>
+    <style type="text/css" media="screen">
+      body {
+        font-family: Helvetica, Arial, sans-serif;
+        margin: 40px 0; 
+        background-color: rgb(24,19,19);
+        color: white;
+        padding: 100px;
+      }
+
+      /* floor styling */
+      #main {
+        margin: 0 auto;
+        width: 800px;
+      }
+
+      section {
+        padding: 20px 0 80px 0;
+        height: 1000px;
+      }
+
+      section h2 {
+        font-size: 48px;
+        border-bottom: 2px solid #CCC;
+        padding-bottom: 20px;
+      }
+
+      /* button styling */
+      ul {
+        position:fixed;
+        top: 40%;
+        right: 0;
+        list-style-type: none;
+      }
+
+      li {
+        width: 30px;
+        padding: 10px;
+        margin-bottom: 1px;
+        background-color: #111;
+        color: #CCC;
+        border-left: 10px solid #333;
+        cursor: pointer;
+        transition: all 0.5s;
+      }
+
+      /* li:hover {
+        color: white;
+        border-left: 20px solid white;
+        line-height: 30px;
+      } */
+
+      .active {
+        color: white;
+        border-left: 20px solid white;
+        line-height: 30px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- elevator buttons -->
+    <ul>
+      <li id="floor5btn">5</li>
+      <li id="floor4btn">4</li>
+      <li id="floor3btn">3</li>
+      <li id="floor2btn">2</li>
+      <li id="floor1btn">1</li>
+    </ul>
+    <!-- floors -->
+    <div id="main">
+      <section id="floor5panel">
+        <h2>Floor 5</h2>
+      </section>
+      <section id="floor4panel">
+        <h2>Floor 4</h2>
+      </section>
+      <section id="floor3panel">
+        <h2>Floor 3</h2>
+      </section>
+      <section id="floor2panel">
+        <h2>Floor 2</h2>
+      </section>
+      <section id="floor1panel">
+        <h2>Floor 1</h2>
+      </section>
+    </div>
+
+
+    <!-- Linking to the clou hosted free version og the scroll plug in and gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
+    <script type="text/javascript"></script>
+  </body>
+</html>
