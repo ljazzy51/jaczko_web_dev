@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>AVAbrew Coffee Types</title>
+        <link rel="stylesheet" href="../css/coffee.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/oyp1qci.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+    </head>
+    <body>
+       <!-- Navigation bar that will be copies to each page -->
+       <nav class="navbar navbar-expand-md">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../html/index.html">AVAbrew</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="../html/coffee.html">Coffee</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../html/menu.html">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../html/puppies.html">Puppies</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../html/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Menu page specific elements -->
+        <main>
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="page_title col-lg-3 col-md-8 col-sm-8 col-12">
+                        <h2>How do you take your coffee?</h2>
+                    </div>
+                    <div id="coffee_animation" class="coffee_animation col-lg-3 col-md-8 col-sm-8 col-12">
+                        <img id="blank_mug" src="../images/coffee_images/coffee_mug.svg" alt="coffee mug">
+                    </div>
+                    <div class="drink_menu col-lg-3 col-md-8 col-sm-8 col-12">
+                        <h3>Click your coffee order to build the drink!</h3>
+                        <h4>Espresso Drinks</h4>
+                        <ul class="espresso_drinks">
+                            <li><button id="macc_bttn">Macchiato</button></li>
+                            <li><button id="esp_bttn">Espresso</button></li>
+                            <li><button id="latte_bttn">Latte</button></li>
+                            <li><button id="cap_bttn">Cappuccino</button></li>
+                            <li><button id="fw_bttn">Flat White</button></li>
+                            <li><button id="cort_bttn">Cortado</button></li>
+                            <li><button id="am_bttn">Americano</button></li>
+                        </ul>
+                        <h4>Non-Espresso Drinks</h4>
+                        <ul class="other_drinks">
+                            <li><button id="drip_bttn">Drip Coffee</button></li>
+                            <li><button id="mat_bttn">Matcha</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden_images">
+                <img id="macchiato" src="../images/coffee_images/SVG/macc.svg" alt="macchiato">
+                <img id="espresso" src="../images/coffee_images/SVG/esp.svg" alt="espresso">
+                <img id="latte" src="../images/coffee_images/SVG/latte.svg" alt="latte">
+                <img id="cappuccino" src="../images/coffee_images/SVG/cap.svg" alt="cappuccino">
+                <img id="flat_white" src="../images/coffee_images/SVG/fw.svg" alt="flat white">
+                <img id="cortado" src="../images/coffee_images/SVG/cort.svg" alt="cortado">
+                <img id="americano" src="../images/coffee_images/SVG/am.svg" alt="americano">
+                <img id="coffee" src="../images/coffee_images/SVG/drip.svg" alt="drip coffee">
+                <img id="matcha" src="../images/coffee_images/SVG/mat.svg" alt="matcha">
+            </div>
+        </main>
+
+        <!-- Footer information that will be copies to each page -->
+        <footer class="footer_flex">
+            <span>
+                <h2>Location</h2>
+            </span>
+            <span>
+                <p> 100 Willoughby Street </p>
+                <p> Brooklyn, NY </p>
+                <p> 11201 </p>
+            </span>
+            <span>
+                <h2>Hours</h2>
+            </span>
+            <span class="hours">
+                <h3>Monday - Friday</h3>
+                <p>7:00am - 5:00pm</p>
+            </span>
+            <span class="hours">
+                <h3>Saturday & Sunday</h3>
+                <p>8:00am - 5:00pm</p>
+            </span>
+            <button><a href="https://orenscoffee.com" target="_blank">Oren's Coffee</a></button>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+                // image ids
+                const blank_mug = document.getElementById('blank_mug')
+                const macchiato = document.getElementById('macchiato')
+                const espresso = document.getElementById('espresso')
+                const latte = document.getElementById('latte')
+                const cappuccino = document.getElementById('cappuccino')
+                const flat_white = document.getElementById('flat_white')
+                const cortado = document.getElementById('cortado')
+                const americano = document.getElementById('americano')
+                const coffee = document.getElementById('coffee')
+                const matcha = document.getElementById('matcha')
+
+                // button ids 
+                const macc_bttn = document.getElementById('macc_bttn')
+                const esp_bttn = document.getElementById('esp_bttn')
+                const latte_bttn = document.getElementById('latte_bttn')
+                const cap_bttn = document.getElementById('cap_bttn')
+                const fw_bttn = document.getElementById('fw_bttn')
+                const cort_bttn = document.getElementById('cort_bttn')
+                const am_bttn = document.getElementById('am_bttn')
+                const drip_bttn = document.getElementById('drip_bttn')
+                const mat_bttn = document.getElementById('mat_bttn')
+
+                macc_bttn.onclick
+                
+            })
+        </script>
+    </body>
+</html>
