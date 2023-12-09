@@ -54,19 +54,19 @@
                     <div class="drink_menu col-lg-3 col-md-8 col-sm-8 col-12">
                         <h3>Click your coffee order to build the drink!</h3>
                         <h4>Espresso Drinks</h4>
-                        <ul class="espresso_drinks">
-                            <li><button id="macc_bttn">Macchiato</button></li>
-                            <li><button id="esp_bttn">Espresso</button></li>
-                            <li><button id="latte_bttn">Latte</button></li>
-                            <li><button id="cap_bttn">Cappuccino</button></li>
-                            <li><button id="fw_bttn">Flat White</button></li>
-                            <li><button id="cort_bttn">Cortado</button></li>
-                            <li><button id="am_bttn">Americano</button></li>
+                        <ul>
+                            <li class="espresso_drinks"><button id="macc_bttn">Macchiato</button></li>
+                            <li class="espresso_drinks"><button id="esp_bttn">Espresso</button></li>
+                            <li class="espresso_drinks"><button id="latte_bttn">Latte</button></li>
+                            <li class="espresso_drinks"><button id="cap_bttn">Cappuccino</button></li>
+                            <li class="espresso_drinks"><button id="fw_bttn">Flat White</button></li>
+                            <li class="espresso_drinks"><button id="cort_bttn">Cortado</button></li>
+                            <li class="espresso_drinks"><button id="am_bttn">Americano</button></li>
                         </ul>
                         <h4>Non-Espresso Drinks</h4>
                         <ul class="other_drinks">
-                            <li><button id="drip_bttn">Drip Coffee</button></li>
-                            <li><button id="mat_bttn">Matcha</button></li>
+                            <li class="espresso_drinks"><button id="drip_bttn">Drip Coffee</button></li>
+                            <li class="espresso_drinks"><button id="mat_bttn">Matcha</button></li>
                         </ul>
                     </div>
                 </div>
@@ -133,7 +133,57 @@
                 const drip_bttn = document.getElementById('drip_bttn')
                 const mat_bttn = document.getElementById('mat_bttn')
 
-                macc_bttn.onclick
+                let mug_image = blank_mug
+                let clicked_image = blank_mug
+
+                let menuButtons = document.getElementsByClassName("espresso_drinks")
+                menuButtons = [].slice.call(menuButtons)
+
+                function clicked(){
+                    menuButtons.forEach(button => {
+                        button.addEventListener(onclick)
+                        if (button.onclick == true){
+                            if(button == macc_bttn){
+                                clicked_image = macchiato
+                                mug_image = clicked_image
+                            }
+                            else if(button == esp_bttn){
+                                clicked_image = espresso
+                                mug_image = clicked_image
+                            }
+                            else if(button == latte_bttn){
+                                clicked_image = latte
+                                mug_image = clicked_image
+                            }
+                            else if(button == cap_bttn){
+                                clicked_image = cappuccino
+                                mug_image = clicked_image
+                            }
+                            else if(button == fw_bttn){
+                                clicked_image = flat_white
+                                mug_image = clicked_image
+                            }
+                            else if(button == cort_bttn){
+                                clicked_image = cortado
+                                mug_image = clicked_image
+                            }
+                            else if(button == am_bttn){
+                                clicked_image = americano
+                                mug_image = clicked_image
+                            }
+                            else if(button == drip_bttn){
+                                clicked_image = coffee
+                                mug_image = clicked_image
+                            }
+                            else if(button == mat_bttn){
+                                clicked_image = matcha
+                                mug_image = clicked_image
+                            }
+                        } else {
+                            mug_image = blank_mug
+                        }
+                    });
+                }
                 
             })
         </script>
