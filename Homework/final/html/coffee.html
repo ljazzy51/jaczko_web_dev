@@ -48,19 +48,22 @@
                     <div class="page_title col-lg-3 col-md-8 col-sm-8 col-12">
                         <h2>How do you take your coffee?</h2>
                     </div>
-                    <div id="coffee_animation" class="coffee_animation col-lg-3 col-md-8 col-sm-8 col-12">
-                        <img id="blank_mug" src="../images/coffee_images/coffee_mug.svg" alt="coffee mug">
+                    <div class="coffee_animation col-lg-3 col-md-8 col-sm-8 col-12">
+                        <img src="../images/coffee_images/SVG/coffee_mug.svg" alt="coffee mug" id="coffee_animation">
+                        <h3 id="coffee_text">Choose Your Drink</h3>
+                        <p id="ingredients_text">Drink Ingredients</p>
                     </div>
                     <div class="drink_menu col-lg-3 col-md-8 col-sm-8 col-12">
                         <h3>Click your coffee order to build the drink!</h3>
                         <h4>Espresso Drinks</h4>
                         <ul>
+                            <li><button id="mug_bttn">Empty Mug</button></li>
                             <li class="espresso_drinks"><button id="macc_bttn">Macchiato</button></li>
                             <li class="espresso_drinks"><button id="esp_bttn">Espresso</button></li>
                             <li class="espresso_drinks"><button id="latte_bttn">Latte</button></li>
                             <li class="espresso_drinks"><button id="cap_bttn">Cappuccino</button></li>
                             <li class="espresso_drinks"><button id="fw_bttn">Flat White</button></li>
-                            <li class="espresso_drinks"><button id="cort_bttn">Cortado</button></li>
+                            <li class="espresso_drinks"><button id="cort_bttn" >Cortado</button></li>
                             <li class="espresso_drinks"><button id="am_bttn">Americano</button></li>
                         </ul>
                         <h4>Non-Espresso Drinks</h4>
@@ -70,17 +73,6 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div class="hidden_images">
-                <img id="macchiato" src="../images/coffee_images/SVG/macc.svg" alt="macchiato">
-                <img id="espresso" src="../images/coffee_images/SVG/esp.svg" alt="espresso">
-                <img id="latte" src="../images/coffee_images/SVG/latte.svg" alt="latte">
-                <img id="cappuccino" src="../images/coffee_images/SVG/cap.svg" alt="cappuccino">
-                <img id="flat_white" src="../images/coffee_images/SVG/fw.svg" alt="flat white">
-                <img id="cortado" src="../images/coffee_images/SVG/cort.svg" alt="cortado">
-                <img id="americano" src="../images/coffee_images/SVG/am.svg" alt="americano">
-                <img id="coffee" src="../images/coffee_images/SVG/drip.svg" alt="drip coffee">
-                <img id="matcha" src="../images/coffee_images/SVG/mat.svg" alt="matcha">
             </div>
         </main>
 
@@ -111,27 +103,33 @@
         <script>
             document.addEventListener('DOMContentLoaded', function(){
                 // image ids
-                const blank_mug = document.getElementById('blank_mug')
-                const macchiato = document.getElementById('macchiato')
-                const espresso = document.getElementById('espresso')
-                const latte = document.getElementById('latte')
-                const cappuccino = document.getElementById('cappuccino')
-                const flat_white = document.getElementById('flat_white')
-                const cortado = document.getElementById('cortado')
-                const americano = document.getElementById('americano')
-                const coffee = document.getElementById('coffee')
-                const matcha = document.getElementById('matcha')
+                let blank_mug = document.getElementById('blank_mug')
+                let macchiato = document.getElementById('macchiato')
+                let espresso = document.getElementById('espresso')
+                let latte = document.getElementById('latte')
+                let cappuccino = document.getElementById('cappuccino')
+                let flat_white = document.getElementById('flat_white')
+                let cortado = document.getElementById('cortado')
+                let americano = document.getElementById('americano')
+                let coffee = document.getElementById('coffee')
+                let matcha = document.getElementById('matcha')
 
                 // button ids 
-                const macc_bttn = document.getElementById('macc_bttn')
-                const esp_bttn = document.getElementById('esp_bttn')
-                const latte_bttn = document.getElementById('latte_bttn')
-                const cap_bttn = document.getElementById('cap_bttn')
-                const fw_bttn = document.getElementById('fw_bttn')
-                const cort_bttn = document.getElementById('cort_bttn')
-                const am_bttn = document.getElementById('am_bttn')
-                const drip_bttn = document.getElementById('drip_bttn')
-                const mat_bttn = document.getElementById('mat_bttn')
+                let mug_bttn = document.getElementById('mug_bttn')
+                let macc_bttn = document.getElementById('macc_bttn')
+                let esp_bttn = document.getElementById('esp_bttn')
+                let latte_bttn = document.getElementById('latte_bttn')
+                let cap_bttn = document.getElementById('cap_bttn')
+                let fw_bttn = document.getElementById('fw_bttn')
+                let cort_bttn = document.getElementById('cort_bttn')
+                let am_bttn = document.getElementById('am_bttn')
+                let drip_bttn = document.getElementById('drip_bttn')
+                let mat_bttn = document.getElementById('mat_bttn')
+
+                let coffee_animation = document.getElementById('coffee_animation')
+                let coffee_text = document.getElementById('coffee_text')
+                let ingredients_text = document.getElementById('ingredients_text')
+
 
                 let mug_image = blank_mug
                 let clicked_image = blank_mug
@@ -139,52 +137,59 @@
                 let menuButtons = document.getElementsByClassName("espresso_drinks")
                 menuButtons = [].slice.call(menuButtons)
 
-                function clicked(){
-                    menuButtons.forEach(button => {
-                        button.addEventListener(onclick)
-                        if (button.onclick == true){
-                            if(button == macc_bttn){
-                                clicked_image = macchiato
-                                mug_image = clicked_image
-                            }
-                            else if(button == esp_bttn){
-                                clicked_image = espresso
-                                mug_image = clicked_image
-                            }
-                            else if(button == latte_bttn){
-                                clicked_image = latte
-                                mug_image = clicked_image
-                            }
-                            else if(button == cap_bttn){
-                                clicked_image = cappuccino
-                                mug_image = clicked_image
-                            }
-                            else if(button == fw_bttn){
-                                clicked_image = flat_white
-                                mug_image = clicked_image
-                            }
-                            else if(button == cort_bttn){
-                                clicked_image = cortado
-                                mug_image = clicked_image
-                            }
-                            else if(button == am_bttn){
-                                clicked_image = americano
-                                mug_image = clicked_image
-                            }
-                            else if(button == drip_bttn){
-                                clicked_image = coffee
-                                mug_image = clicked_image
-                            }
-                            else if(button == mat_bttn){
-                                clicked_image = matcha
-                                mug_image = clicked_image
-                            }
-                        } else {
-                            mug_image = blank_mug
-                        }
-                    });
-                }
-                
+                // this works but doesnt load the image but it is console logging the here on click rather than on load
+                mug_bttn.addEventListener("click", function(){
+                    coffee_animation.src = "../images/coffee_images/SVG/coffee_mug.svg"
+                    coffee_text.textContent = "Empty Mug"
+                    ingredients_text.textContent = "Choose Your Drink"
+
+                })
+                macc_bttn.addEventListener("click", function(){
+                    coffee_animation.src = "../images/coffee_images/SVG/macc.svg"
+                    coffee_text.textContent = "Macchiato"
+                    ingredients_text.textContent = "Espresso and a dollop of steamed milk"
+
+                })
+                esp_bttn.addEventListener("click", function(){
+                    coffee_animation.src = "../images/coffee_images/SVG/esp.svg"
+                    coffee_text.textContent = "Espresso"
+                    ingredients_text.textContent = "Just a shot of espresso"
+                })
+                latte_bttn.addEventListener("click", function(){
+                    coffee_animation.src = "../images/coffee_images/SVG/latte.svg"
+                    coffee_text.textContent = "Latte"
+                    ingredients_text.textContent = "Espresso and mostly steamed milk but just a small amount of foam"
+                })
+                cap_bttn.addEventListener("click", function(){
+                    coffee_animation.src = "../images/coffee_images/SVG/cap.svg"
+                    coffee_text.textContent = "Cappuccino"
+                    ingredients_text.textContent = "Espresso and a small amount of steamed milk with mostly foam"
+                })
+                fw_bttn.addEventListener("click", function(){
+                    coffee_animation.src = "../images/coffee_images/SVG/fw.svg"
+                    coffee_text.textContent = "Flat White"
+                    ingredients_text.textContent = "Espresso and steamed milk but no foam"
+                })
+                cort_bttn.addEventListener("click", function(){
+                    coffee_animation.src = "../images/coffee_images/SVG/cort.svg"
+                    coffee_text.textContent = "Cortado"
+                    ingredients_text.textContent = "Equal parts of espresso and steamed milk. Similar to a short latte"
+                })
+                am_bttn.addEventListener("click", function(){
+                    coffee_animation.src = "../images/coffee_images/SVG/am.svg"
+                    coffee_text.textContent = "Americano"
+                    ingredients_text.textContent = "Espresso and hot water. Similar to a drip coffee in flavor"
+                })
+                drip_bttn.addEventListener("click", function(){
+                    coffee_animation.src = "../images/coffee_images/SVG/drip.svg"
+                    coffee_text.textContent = "Drip Coffee"
+                    ingredients_text.textContent = "Filter coffee much like what you may make at home"
+                })
+                mat_bttn.addEventListener("click", function(){
+                    coffee_animation.src = "../images/coffee_images/SVG/mat.svg"
+                    coffee_text.textContent = "Matcha"
+                    ingredients_text.textContent = "Matcha powder mixed with hot water to create a syrup, steamed milk and foam"
+                })
             })
         </script>
     </body>
