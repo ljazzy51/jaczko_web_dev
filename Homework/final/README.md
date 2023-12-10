@@ -19,3 +19,6 @@
 **Code Segment**
 ![Code Section](../final/images/code_segment.png "JavaScript Segment of my Code")
 - This is the segment of code of the JavaScript that was most difficult to figure out on how to make the image of the menu item's ingredients and the name of the item as well as the construction of the item change as a result of the menu item buttons being pressed 
+
+**Link to the Final Project Repository**
+[Lilyanne Jaczko's Final Project Repository](https://github.com/ljazzy51/jaczko_web_dev/tree/main/Homework/final)
